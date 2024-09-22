@@ -136,10 +136,40 @@ div.menu a:not(:last-child)::after {
 
 /* Estilo do footer */
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   padding: 2rem;
   text-align: center;
+}
+
+/* Estilo do main de todas as paginas */
+main {
+  text-align: center;
+  margin: 2rem 0;
+ }
+ 
+main h1 {
+  font-size: 2.5rem;
+}
+
+main p {
+  font-size: 1.3rem;
+  width: 80%;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+.dicas {
+  text-align: start;
+  margin: 0;
+}
+
+.dicas section {
+  padding: 4rem;
+  border-radius: 20px;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.dicas p {
+  width: 100%;
+  margin: 0;
 }
