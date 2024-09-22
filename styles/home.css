@@ -1,0 +1,64 @@
+main {
+ text-align: center;
+ margin: 2rem 0;
+}
+
+main h1 {
+  font-size: 2.5rem;
+}
+
+main p {
+  font-size: 1.3rem;
+  width: 80%;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+.alimentacao-balanceada {
+  background-color: var(--cor-alimentacao);
+}
+
+.exercicios-fisicos {
+  background-color: var(--cor-exercicios);
+}
+
+.exercicios-fisicos button {
+  background-color: #4A6A8C;
+}
+
+.saude-mental {
+  background-color: var(--cor-saude-mental);
+}
+
+.saude-mental button {
+  background-color: #7A4E58;
+}
+
+.alimentacao-balanceada, .exercicios-fisicos, .saude-mental {
+  padding: 4rem;
+  border-radius: 20px;
+  width: 80%;
+  margin: 3rem auto;
+}
+
+.informacoes-paginas h2 {
+  font-size: 2rem;
+}
+
+.informacoes-paginas p {
+  font-size: 1.2rem;
+}
+
+.informacoes-paginas button {
+  font-size: 1rem;
+  transition: 500ms;
+}
+
+.informacoes-paginas button a {
+  color: white;
+  font-weight: bold;
+}
+
+.informacoes-paginas button:hover {
+  transform: translateY(-7px);
+}

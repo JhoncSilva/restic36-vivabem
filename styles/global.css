@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Variáveis de cores de fundo, cores das fontes e tipo de fonte */
+:root {
+  --cor-fundo: #E6F7F8;
+  --cor-texto-padrao: #333333;
+  --cor-texto-destaque-1: #2D6A4F;
+  --cor-texto-destaque-2: #FFA45B;
+  --cor-alimentacao: #B5E48C;
+  --cor-exercicios: #A3C4F3;
+  --cor-saude-mental: #de97a5;
+  --fonte-principal: 'Lato', sans-serif;
+}
+
+/* Mudei a cor de fundo da barra de rolagem (transparente), a largura da barra de rolagem,
+  e a cor dela normal e ao passar o mouse em cima */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cor-texto-padrao);
+}
+
+/* Configuração dos icones do material icons */
+.icon {
+  font-family: 'Material Icons';
+  font-size: 24px; /* Tamanho do ícone */
+  vertical-align: middle; /* Alinha o ícone com o texto */
+  margin-right: 8px; /* Espaço à direita do ícone */
+}
+
+/* Configurações gerais do site, margin e padding zerados e box-sizing border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Defini uma margin padrão para o body (auto porque se for uma tela grande vai ficar tudo no meio)
+   Width máxima para o body padrão, se forem telas widescreen vou aumentar, e telas mobile vou deixa em 100% com padding horizontal
+   Fontes padrões para o site todo, cor de fundo padrão, e cor de texto padrão, junto da line height padrão */
+body {
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 0 20px;
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-padrao);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  body {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 1600px) {
+  body {
+    width: 1500px;
+  }
+}
+
+/* Tipografia padrão para titulos e textos comuns */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* Cor padrão para links e remoção da linha embaixo do texto */
+
+a {
+  color: var(--cor-texto-destaque-2);
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+/* Estilo padrão para todos os botões */
+
+button {
+  background-color: var(--cor-texto-destaque-1);
+  font-family: var(--fonte-principal);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Configuração do menu */
+
+header {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.menu {
+  display: flex;
+  gap: 10px;
+}
+
+div.menu a {
+  font-size: 1rem;
+  transition: 300ms;
+  font-weight: bold;
+}
+
+div.menu a:hover {
+  transform: translateY(-5px);
+}
+
+div.menu a:not(:last-child)::after {
+  content: "•";
+  margin: 0 5px; 
+}
+
+/* Estilo do footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  text-align: center;
+}
