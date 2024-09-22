@@ -115,23 +115,58 @@ header {
 }
 
 div.menu {
+  position: relative;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Ocultar o botão por padrão */
+}
+
+div.menu-items {
   display: flex;
   gap: 10px;
 }
 
-div.menu a {
+div.menu-items a {
   font-size: 1rem;
   transition: 300ms;
   font-weight: bold;
 }
 
-div.menu a:hover {
+div.menu-items a:hover {
   transform: translateY(-5px);
 }
 
 div.menu a:not(:last-child)::after {
   content: "•";
   margin: 0 5px; 
+}
+
+@media (max-width: 768px) { /* Ajuste conforme necessário */
+  .menu-toggle {
+      display: block; /* Mostrar o botão em telas menores */
+  }
+
+  div.menu-items {
+      display: none; /* Ocultar os itens do menu por padrão */
+      flex-direction: column; /* Colocar os itens em coluna */
+      position: absolute; /* Posicionar acima dos itens */
+      background-color: white; /* Cor do fundo */
+      width: 100%; /* Largura total */
+      z-index: 1000; /* Colocar acima de outros elementos */
+  }
+
+  div.menu-items.show {
+      display: flex; /* Mostrar os itens quando o menu é expandido */
+  }
+
+  div.menu-items a {
+      border-bottom: 1px solid #ccc; /* Separador entre os itens */
+  }
 }
 
 /* Estilo do footer */
